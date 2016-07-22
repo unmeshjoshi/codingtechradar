@@ -36,5 +36,4 @@ public class User {
         Profile result = new Profile();
         return result;
     }
-
 }
