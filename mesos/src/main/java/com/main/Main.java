@@ -12,7 +12,7 @@ import org.apache.mesos.Scheduler;
 public class Main {
     public static void main(String[] args) throws Exception {
 
-        FrameworkInfo frameworkInfo = createFramework();
+        FrameworkInfo frameworkInfo = createFrameworkInfo();
         ExecutorInfo executorInfo = createExecutorInfo();
 
         String mesosMasterUrl = args[0];
@@ -28,7 +28,7 @@ public class Main {
         System.exit(status);
     }
 
-    private static FrameworkInfo createFramework() {
+    private static FrameworkInfo createFrameworkInfo() {
         FrameworkInfo.Builder frameworkBuilder = FrameworkInfo
                 .newBuilder()
                 .setFailoverTimeout(120000)
